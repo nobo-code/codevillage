@@ -1,0 +1,60 @@
+.first-v {
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    width: 46%;
+    position: relative;
+      @include sp {
+        width: 0%;
+        z-index: 1;
+        position: static;
+      }
+  }
+  &__title__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 27%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 38px;
+    letter-spacing: 3.8;
+    white-space: nowrap;
+    text-align: center;
+    @include sp {
+      color: #FFFFFF;
+      flex-direction: column-reverse;
+      height: 120px;
+      top: 60%;
+    }
+    p {
+      font-family: hiragino mincho pro;
+      @include sp {
+        font-size: 23px;
+      }
+    }
+    h1 {
+      font-family: zapfino;
+      @include sp {
+        font-size: 28px;
+      }
+    }
+  }
+  &__img {
+    width: 54%;
+    @include sp {
+      width: 100%;
+    }
+    & .f-img {
+      background-image: url(../img/Blond\ woman\ with\ long\ curly\ beautiful\ hair.png);
+      background-size: cover;
+      @include sp {
+        background-size: content;
+      }
+      width: 100%;
+      height: 100vh;
+    }
+  }
+}

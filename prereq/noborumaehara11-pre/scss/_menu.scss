@@ -1,0 +1,53 @@
+.menu__box {
+  & ul {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+      flex-direction: column;
+    }
+    & li:nth-child(n+2) {
+      @include sp {
+        padding-top: 60px;
+      }
+    }
+    & li {
+      width: 21vw;
+      text-align: center;
+      @include sp {
+        width: 100%;
+      }
+      & img {
+        width: 100%;
+        @include sp {
+          height: 271px;
+          object-fit: cover;
+        }
+      }
+      & .box__text {
+        padding: 0 10px;
+        text-align: left;
+        & h3 {
+          font-size: 30px;
+          letter-spacing: 3px;
+          padding: 34px 0;
+          @include sp {
+            padding: 30px 0;
+          }
+        }
+        & p {
+          font-size: 1rem;
+          letter-spacing: 1.6px;
+          line-height: 19px;
+          padding-bottom: 34px;
+          @include sp {
+            padding-bottom: 26px;
+          }
+        }
+        & .price {
+          font-size: 1rem;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

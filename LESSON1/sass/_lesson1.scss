@@ -1,0 +1,94 @@
+
+
+// ホバーしたら中央から広がる下線
+
+.item-box {
+  text-align: center;
+  font-size: 20px;
+  color: gray;
+  margin: 20px 0;
+}
+
+
+.i {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+
+}
+.i:hover {
+  color: black;
+  cursor: pointer;
+}
+.i::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+.i:hover::after {
+  transform: scale(1, 1);
+}
+
+
+// 立体的なボタン
+
+.button {
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  margin: 100px auto;
+  color: white;
+}
+
+a.btn--red.btn--cubic {
+  display: block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  background: linear-gradient(to bottom, #000000, #999999);
+  border-bottom: 7px solid #000000;
+}
+
+a.btn--red.btn--cubic:active {
+  margin-top: 107px;
+  border-bottom: 0 solid;
+  transition-timing-function: ease-in;
+}
+
+a.btn--radius {
+  border-radius: 100vh;
+}
+
+
+
+// ホバーしたら回転する画像
+
+.img-box {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  width: 284px;
+  height: 281px;
+  background-color: #EEEEEE;
+  margin: 0 auto 100px;
+  overflow: hidden;
+  & .img-p {
+    transition: 3s;
+    transform: rotateZ(0deg);
+  }
+}
+
+.img-p:hover {
+  transform: rotateZ(20deg) scale(1.5);
+}
+
